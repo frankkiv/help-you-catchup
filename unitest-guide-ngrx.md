@@ -151,3 +151,22 @@ Notice:
 2. Vaildate whole form
 
 https://codecraft.tv/courses/angular/unit-testing/model-driven-forms/
+
+#### Jasmine (test timeout)
+Notice: 
+1. Use done callback for Asynchronous test, the default timeout is 5 secs.
+2. If you don't set the done callback, default timeout will less than 500ms.
+3. Customize the timeout for each it, just need to set the third parameter.
+e.g.
+```javascript
+describe("long asynchronous specs", () => {
+    it("takes a long time", (done) => {
+        console.log('takes a long time')
+        setTimeout(() => {
+            console.log('timeout cb')
+            done();
+        }, 4900);
+    }, 5000); 
+});
+```
+reference: https://jasmine.github.io/api/edge/global.html#it
