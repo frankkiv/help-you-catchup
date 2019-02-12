@@ -157,6 +157,7 @@ Notice:
 1. Use done callback for Asynchronous test, the default timeout is 5 secs.
 2. If you don't set the done callback, default timeout will less than 500ms.
 3. Customize the timeout for each it, just need to set the third parameter.
+
 e.g.
 ```javascript
 describe("long asynchronous specs", () => {
