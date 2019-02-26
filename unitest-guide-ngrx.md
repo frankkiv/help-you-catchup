@@ -1,8 +1,8 @@
 # Unitest Guide - Angular Ngrx
 ## Action
 Steps:
-* Create an test action
-* Check type and payload of action equal to the action you created
+    * Create an test action
+    * Check the type and payload of action as ecpactation as the action you created
 
 e.g.
 ```javascript
@@ -18,10 +18,10 @@ it('should create SEND_NOTIFICATION_FAILURE action', () => {
 ```
 ## Reducer
 Steps:
-* Create the test action
-* Declare the current state by initial state
-* Declare the expect state with by reducer and current
-* Check the data through the reducer is as expectation
+    * Create the test action
+    * Declare the current state by initial state
+    * Trigger the action with current state
+    * Check the data through the reducer is as expectation
 
 e.g.
 ```javascript
@@ -45,9 +45,9 @@ Steps:
    * Check the logic as expectation
  
 The test cases:
-* Check the effects return a right action that you expected
-* Check the effects return a wrong action that you expected
-* The metadata of an effect (dispatch attribute: true or not)
+    * Check the effects return a right action that you expected
+    * Check the effects return a wrong action that you expected
+    * The metadata of an effect (dispatch attribute: true or not)
 
 e.g.
 ```javascript
@@ -88,9 +88,9 @@ ref:
 
 ## Selector
 Steps:
-* Fake the input state
-* Use selector.porjector to set the fake state to store
-* Call the selector and check output as expectation
+    * Fake the input state
+    * Use selector.porjector to set the fake state to store
+    * Call the selector and check output as expectation
 
 e.g.
 ```javascript
@@ -112,12 +112,11 @@ https://blog.angularindepth.com/how-i-test-my-ngrx-selectors-c50b1dc556bc
 
 ## Component
 Steps:
-* Use the real store, but fake the service and return data
-* How to trigger the selector in component => 
-dispatch the load success action with fake data.
-* Check the component create success and method has been called
-* Check the function work as expectation
-* Integration for checking HTML preview
+    * Use the real store, but fake the service and service return data
+    * How to trigger the selector in component => dispatch the load success action with fake data.
+    * Check the component create success and method has been called
+    * Check the function work as expectation
+    * Integration for checking HTML preview
 
 e.g.
 ```javascript
